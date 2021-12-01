@@ -3,8 +3,8 @@
 inline fun inlineFunction(word : String){
     println(word)
 }
-// inline funtion
-inline fun inlineFuntion2( lambda : () -> Unit){
+// inline function
+inline fun inlineFunction2( lambda : () -> Unit){
       lambda()
 }
 fun main(){
@@ -13,7 +13,7 @@ fun main(){
     inlineFunction("hey its inline function")
 
     //inline function lambda as argument
-    inlineFuntion2 {
+    inlineFunction2 {
         println("inline lambda function ")
         return
     }

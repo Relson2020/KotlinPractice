@@ -3,10 +3,10 @@ fun main(){
 
     // lambda function
     println("-------lambda function----------- ")
-     val lambdaFunction  = { a:Int , b:Int  ->
-         a+b
+     val lambdaFunction: (Int , Int ,Int) -> Int  = { a , b, c  ->
+         a+b+c
     }
-    println("${lambdaFunction(10,30)}")
+    println("${lambdaFunction(10,30,44)}")
 
     //anonymous function
     println("----------anonymous function----------")
