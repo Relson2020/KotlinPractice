@@ -63,6 +63,5 @@ fun main(){
     for (i in 0 until mutableList.count()){
         print(mutableList.get(i))
     }
-    var mutableList1 : MutableList<String> = ArrayList()
 
 }

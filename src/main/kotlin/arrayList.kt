@@ -57,4 +57,14 @@ fun main() {
     for (word in arrayList2) {
         print("$word ")
     }
+
+    println("")
+    // mutableArray list
+    val mutableList1 : MutableList<String> = ArrayList()
+    mutableList1.add("hey")
+    mutableList1.add("there")
+
+    mutableList1.forEach{
+        print("$it ")
+    }
 }
