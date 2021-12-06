@@ -8,7 +8,7 @@ fun main(){
     val emptyString = String()
 
     // traversing through String by indices
-    print("traversing through String by indexe : ")
+    print("traversing through String by index : ")
     print("${variableName[0]} ")
     print("${variableName[1]} ")
     print("${variableName[2]} ")
