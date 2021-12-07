@@ -1,5 +1,23 @@
 import kotlin.properties.Delegates
 
+interface Base {
+    fun display()
+}
+
+class TryDelegation (private val value : Int ): Base {
+    override fun display (){
+        println("executing the display function via delegation and number is : $value")
+    }
+}
+
+class TryDelegation2 (private val value : Int ): Base {
+    override fun display (){
+        println("executing the display function via delegation and number is : $value")
+    }
+}
+
+class DelegationClass2 (b:Base )  :Base  by b
+
 class DelegationClass {
     init {
         println("Delegation class ")
@@ -12,18 +30,15 @@ class LazyClass{
         println("oldNum :$oldNum and newNum :$newNum")
 
     }
-    var vetoNum : Int by Delegates.vetoable(0){ property, oldNum, newNum ->
 
-       newNum >= 0
-    }
 }
 fun main(){
 
     LazyClass().obj
     LazyClass().num = 23
 
-    println(LazyClass().vetoNum)
-    LazyClass().vetoNum = 7
-    println(LazyClass().vetoNum)
-
+    val b = TryDelegation(10)
+    val a = TryDelegation2(23)
+    DelegationClass2(b).display()
+    DelegationClass2(a).display()
 }
