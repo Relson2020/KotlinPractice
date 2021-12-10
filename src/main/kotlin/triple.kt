@@ -9,6 +9,10 @@ fun main(){
     val (here , there , where) = Triple("are you here","are you there","where then")
     println("here : $here \nthere : $there \nwhere : $where")
 
-    // toString()
-    println(triple.toString())
+    // triple toString()
+    println("toString : ${triple.toString()}")
+
+    // triple toList()
+    println("toList : ${triple.toList()}")
+
 }
